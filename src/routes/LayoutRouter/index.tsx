@@ -1,5 +1,5 @@
 import React, { JSX } from "react";
-import { Header } from "../../components/layout/Header";
+import { StyledLayoutRouter } from "./styled";
 
 interface IProps {
   children: JSX.Element;
@@ -8,10 +8,5 @@ interface IProps {
 export const LayoutRouter: React.FunctionComponent<IProps> = ({
   children,
 }): JSX.Element => {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+  return <StyledLayoutRouter>{children}</StyledLayoutRouter>;
 };

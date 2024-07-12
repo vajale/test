@@ -34,6 +34,26 @@ const config: Configuration = {
           },
         },
       },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: "url-loader",
+        options: { limit: false },
+      },
+      {
+        test: /\.(jpe?g|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "images", //
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {

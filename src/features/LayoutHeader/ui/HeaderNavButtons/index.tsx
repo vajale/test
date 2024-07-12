@@ -1,12 +1,13 @@
 import React from "react";
+import { StyledHeaderNavButton, StyledHeaderNavButtons } from "./styled";
 
 export const HeaderNavButtons = () => {
   return (
-    <div>
-      <span>ГЛАВНАЯ</span>
-      <span>ОТЗЫВЫ</span>
-      <span>УСЛУГИ</span>
-      <span>РАБОТЫ</span>
-    </div>
+    <StyledHeaderNavButtons>
+      <StyledHeaderNavButton>ГЛАВНАЯ</StyledHeaderNavButton>
+      <StyledHeaderNavButton>ОТЗЫВЫ</StyledHeaderNavButton>
+      <StyledHeaderNavButton>УСЛУГИ</StyledHeaderNavButton>
+      <StyledHeaderNavButton>РАБОТЫ</StyledHeaderNavButton>
+    </StyledHeaderNavButtons>
   );
 };
