@@ -1,13 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-const App = () => (
-  <h1>My React and TypeScript App!! {new Date().toLocaleDateString()}</h1>
-);
+import { createRoot } from "react-dom/client";
+import { App } from "./App";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const domNode = document.getElementById("root");
+const root = createRoot(domNode!);
+root.render(<App />);
