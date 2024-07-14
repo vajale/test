@@ -7,8 +7,12 @@ const BlockStyles = ({ theme }: { theme: Theme }) =>
     border: "3px solid rgba(43, 179, 107, 1)",
     borderRadius: "8px",
 
-    [theme.breakpoints.between("md", "xl")]: {
-      minWidth: "50vw",
+    [theme.breakpoints.between("md", "lg")]: {
+      minWidth: "50%",
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      minWidth: "50%",
     },
   });
 
@@ -17,7 +21,7 @@ const HeaderStyles = ({ theme }: { theme: Theme }) =>
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    padding: "17px 8vw",
+    padding: "17px 3vw",
     fontSize: "60px",
     fontFamily: "Inter Bold, Arial Bold, sans-serif",
     fontWeight: 700,

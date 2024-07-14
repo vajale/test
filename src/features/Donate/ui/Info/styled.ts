@@ -6,14 +6,24 @@ const InfoStyles = ({ theme }: { theme: Theme }) =>
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
+    position: "relative",
 
     ".logo": {
       width: "90% !important",
     },
 
-    img: {
-      width: "20px",
-      cursor: "pointer",
+    ".ip": {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 16,
+
+      [theme.breakpoints.down("lg")]: {
+        justifyContent: "center",
+      },
+    },
+
+    [theme.breakpoints.up("md")]: {
+      minWidth: "45%",
     },
 
     [theme.breakpoints.down("lg")]: {

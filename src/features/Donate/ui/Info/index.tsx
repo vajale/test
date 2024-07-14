@@ -5,6 +5,7 @@ import SigmaLandLogo from "@/assets/png/SigmalandLogo.png";
 // @ts-expect-error img error
 import Copy from "@/assets/svg/Copy.svg";
 import { Stack } from "@mui/material";
+import { Contacts } from "@/features/Donate/ui/Info/Contacts";
 
 export enum InfoTextSized {
   large,
@@ -23,16 +24,21 @@ export const Info = () => {
 
   return (
     <StyledInfo>
-      {headerLogoNode()}
-      <StyledInfoHeaderText textSize={InfoTextSized.large}>
-        Sigmaland
-      </StyledInfoHeaderText>
-      <Stack direction="row" gap={1} onClick={() => handleClick()}>
-        <StyledInfoHeaderText textSize={InfoTextSized.small}>
-          IP: Sigmaland.fun
+      <Stack>
+        {headerLogoNode()}
+        <StyledInfoHeaderText textSize={InfoTextSized.large}>
+          Sigmaland
         </StyledInfoHeaderText>
-        <img src={Copy} alt={"copy"} />
+
+        <Stack className={"ip"} onClick={() => handleClick()}>
+          <StyledInfoHeaderText textSize={InfoTextSized.small}>
+            IP: Sigmaland.fun
+          </StyledInfoHeaderText>
+          <img src={Copy} alt={"copy"} />
+        </Stack>
       </Stack>
+
+      <Contacts className="unShown" />
     </StyledInfo>
   );
 };

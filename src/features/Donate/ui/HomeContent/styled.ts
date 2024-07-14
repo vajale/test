@@ -6,7 +6,7 @@ const HomeContentStyles = ({ theme }: { theme: Theme }) =>
     transition: "flex-direction 0.3s",
     display: "flex",
     width: "100%",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
 
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
