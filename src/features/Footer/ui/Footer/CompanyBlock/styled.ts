@@ -1,4 +1,4 @@
-import { css, styled } from "@mui/system";
+import { css, styled, Theme } from "@mui/system";
 
 const InfoStyles = css({
   display: "flex",
@@ -7,27 +7,32 @@ const InfoStyles = css({
   gap: "15px",
 });
 
-const CompanyStyles = css({
-  display: "flex",
-  flexDirection: "row",
-  gap: "30px",
-  color: "white",
-  alignItems: "center",
-
-  ".mail": {
+const CompanyStyles = ({ theme }: { theme: Theme }) =>
+  css({
     display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    span: {
-      color: "rgba(170, 170, 170, 1)",
-      whiteSpace: "nowrap",
-    },
-  },
+    flexDirection: "row",
+    gap: "30px",
+    color: "white",
+    alignItems: "center",
 
-  ".company-block": {
-    color: "rgba(255, 255, 255, 1)",
-  },
-});
+    ".mail": {
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+      span: {
+        color: "rgba(170, 170, 170, 1)",
+        whiteSpace: "nowrap",
+      },
+
+      [theme.breakpoints.down("md")]: {
+        alignItems: "center",
+      },
+    },
+
+    ".company-block": {
+      color: "rgba(255, 255, 255, 1)",
+    },
+  });
 
 export const StyledInfo = styled("div")(InfoStyles);
 export const StyledCompany = styled("div")(CompanyStyles);

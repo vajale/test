@@ -1,11 +1,16 @@
 import { css, styled, Theme } from "@mui/system";
 
-const BlockStyles = css({
-  paddingTop: "17px",
-  backgroundColor: "rgba(218, 218, 218, 1)",
-  border: "3px solid rgba(43, 179, 107, 1)",
-  borderRadius: "8px",
-});
+const BlockStyles = ({ theme }: { theme: Theme }) =>
+  css({
+    paddingTop: "17px",
+    backgroundColor: "rgba(218, 218, 218, 1)",
+    border: "3px solid rgba(43, 179, 107, 1)",
+    borderRadius: "8px",
+
+    [theme.breakpoints.between("md", "xl")]: {
+      minWidth: "50vw",
+    },
+  });
 
 const HeaderStyles = ({ theme }: { theme: Theme }) =>
   css({

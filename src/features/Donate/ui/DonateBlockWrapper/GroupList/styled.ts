@@ -39,10 +39,6 @@ const PriviligueItemStyles = ({ theme }: { theme: Theme }) =>
       },
     },
 
-    [theme.breakpoints.between("md", "xl")]: {
-      minWidth: "50vw",
-    },
-
     "&:hover": {
       transform: "scale3d(1.03, 1.03, 1.03)",
       borderColor: "rgba(43, 179, 107, 1)",

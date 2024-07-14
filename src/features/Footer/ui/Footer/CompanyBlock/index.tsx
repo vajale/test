@@ -7,6 +7,7 @@ export const CompanyBlock = () => {
   const MailNode = () => {
     return (
       <div className={"mail"}>
+        <span className={"text-large"}>© SIGMALAND.FUN 2024</span>
         <span className={"text-medium"}>
           Почта для связи: sland.info@yandex.ru
         </span>
