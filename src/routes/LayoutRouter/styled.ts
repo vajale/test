@@ -5,11 +5,11 @@ import Background from "@/assets/png/upscaled.png";
 
 const styles = css({
   width: "100wh",
-  height: "100vh",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
   transition: "0.3s",
+  minHeight: "100vh",
 
   "&:after": {
     content: `""`,
@@ -18,7 +18,6 @@ const styles = css({
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "fixed",
-    height: "100vh",
     top: 0,
     left: 0,
     right: 0,

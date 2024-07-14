@@ -7,6 +7,15 @@ const InfoStyles = ({ theme }: { theme: Theme }) =>
     flexDirection: "column",
     alignItems: "start",
 
+    ".logo": {
+      width: "90% !important",
+    },
+
+    img: {
+      width: "20px",
+      cursor: "pointer",
+    },
+
     [theme.breakpoints.down("lg")]: {
       alignItems: "center",
     },
@@ -22,10 +31,10 @@ const InfoLargeTextStyles = ({ theme }: { theme: Theme }) =>
     [theme.breakpoints.up("xl")]: {
       fontSize: "76px",
     },
-    [theme.breakpoints.between("lg", "xl")]: {
+    [theme.breakpoints.between("md", "xl")]: {
       fontSize: "52px",
     },
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       display: "none",
     },
   });
@@ -55,7 +64,7 @@ const ImageStyles = ({ theme }: { theme: Theme }) =>
     display: "inline-block",
     width: "90%",
 
-    [theme.breakpoints.up("lg")]: {
+    [theme.breakpoints.up("md")]: {
       display: "none",
     },
   });

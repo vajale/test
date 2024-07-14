@@ -2,6 +2,9 @@ import React from "react";
 import { StyledImage, StyledInfo, StyledInfoHeaderText } from "./styled";
 // @ts-expect-error img error
 import SigmaLandLogo from "@/assets/png/SigmalandLogo.png";
+// @ts-expect-error img error
+import Copy from "@/assets/svg/Copy.svg";
+import { Stack } from "@mui/material";
 
 export enum InfoTextSized {
   large,
@@ -15,7 +18,7 @@ export const Info = () => {
   };
 
   const headerLogoNode = () => {
-    return <StyledImage src={SigmaLandLogo} alt="logo" />;
+    return <StyledImage className={"logo"} src={SigmaLandLogo} alt="logo" />;
   };
 
   return (
@@ -24,12 +27,12 @@ export const Info = () => {
       <StyledInfoHeaderText textSize={InfoTextSized.large}>
         Sigmaland
       </StyledInfoHeaderText>
-      <StyledInfoHeaderText
-        textSize={InfoTextSized.small}
-        onClick={() => handleClick()}
-      >
-        IP: Sigmaland.fun
-      </StyledInfoHeaderText>
+      <Stack direction="row" gap={1} onClick={() => handleClick()}>
+        <StyledInfoHeaderText textSize={InfoTextSized.small}>
+          IP: Sigmaland.fun
+        </StyledInfoHeaderText>
+        <img src={Copy} alt={"copy"} />
+      </Stack>
     </StyledInfo>
   );
 };

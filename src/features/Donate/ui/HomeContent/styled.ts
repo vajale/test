@@ -6,13 +6,14 @@ const HomeContentStyles = ({ theme }: { theme: Theme }) =>
     transition: "flex-direction 0.3s",
     display: "flex",
     width: "100%",
+    justifyContent: "space-around",
 
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
       justifyContent: "space-around",
     },
 
-    [theme.breakpoints.down("lg")]: {
+    [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       gap: "60px",
     },

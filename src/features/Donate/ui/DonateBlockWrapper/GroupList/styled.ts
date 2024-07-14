@@ -12,7 +12,7 @@ const PriviligueItemStyles = ({ theme }: { theme: Theme }) =>
     flexDirection: "row",
     justifyContent: "space-between",
     minHeight: "100px",
-    maxHeight: "20%",
+    maxHeight: "120px",
     padding: "9px 20px",
     backgroundColor: "rgba(225, 225, 225, 1)",
     boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.25)",
