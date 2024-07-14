@@ -1,5 +1,7 @@
 import React from "react";
-import { StyledInfo, StyledInfoHeaderText } from "./styled";
+import { StyledImage, StyledInfo, StyledInfoHeaderText } from "./styled";
+// @ts-expect-error img error
+import SigmaLandLogo from "@/assets/png/SigmalandLogo.png";
 
 export enum InfoTextSized {
   large,
@@ -12,8 +14,13 @@ export const Info = () => {
     await navigator.clipboard.writeText("Sigmaland.fun");
   };
 
+  const headerLogoNode = () => {
+    return <StyledImage src={SigmaLandLogo} alt="logo" />;
+  };
+
   return (
     <StyledInfo>
+      {headerLogoNode()}
       <StyledInfoHeaderText textSize={InfoTextSized.large}>
         Sigmaland
       </StyledInfoHeaderText>

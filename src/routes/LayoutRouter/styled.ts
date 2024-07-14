@@ -6,6 +6,10 @@ import Background from "@/assets/png/upscaled.png";
 const styles = css({
   width: "100wh",
   height: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  transition: "0.3s",
 
   "&:after": {
     content: `""`,
