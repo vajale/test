@@ -12,13 +12,13 @@ import "./assets/fonts/Inter-Bold.ttf";
 
 export const App = () => {
   return (
-    <>
-      <GlobalStyles />
-      <Provider store={store}>
-        <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme}>
+      <>
+        <GlobalStyles />
+        <Provider store={store}>
           <HeadRouter />
-        </ThemeProvider>
-      </Provider>
-    </>
+        </Provider>
+      </>
+    </ThemeProvider>
   );
 };
