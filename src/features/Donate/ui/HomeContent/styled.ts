@@ -16,6 +16,11 @@ const HomeContentStyles = ({ theme }: { theme: Theme }) =>
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       gap: "60px",
+      margin: "20px 5px",
+    },
+
+    [theme.breakpoints.between("md", "lg")]: {
+      gap: "10px",
     },
   });
 

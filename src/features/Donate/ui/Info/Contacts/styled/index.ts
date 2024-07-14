@@ -11,6 +11,10 @@ const ContactsStyles = ({ theme }: { theme: Theme }) =>
     width: "100%",
     maxWidth: "580px",
 
+    [theme.breakpoints.down("md")]: {
+      margin: `${theme.spacing(2)} 0`,
+    },
+
     "&.shown": {
       [theme.breakpoints.down("md")]: {
         display: "grid",
